@@ -7,6 +7,7 @@ Environment: R
 BEER's latest version: https://github.com/jumphone/BEER/releases
 
 # News:
+* Aug. 2024 ( V0.1.10 ): for SeuratObj V5.
 
 * Mar. 2021 ( V0.1.9 ): First version for Seurat 4.0.0
 
