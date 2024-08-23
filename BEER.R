@@ -515,7 +515,7 @@ BEER <- function(DATA, BATCH,  GNUM=30, PCNUM=50, GN=2000, CPU=4, COMBAT=TRUE, p
         library(sva)
         library(limma)
         pheno = data.frame(batch=as.matrix(BATCH))
-        orig.data=GetAssayData(pbmc, assay='RNA', layer='data')
+        orig.data=GetAssayData(pbmc, assay='RNA', layer='counts')
         used.gene.index=which(rownames(orig.data) %in% VARG)
         #edata = as.matrix(orig.data)[used.gene.index,]
         edata = as_matrix(orig.data)[used.gene.index,]
