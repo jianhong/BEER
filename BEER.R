@@ -518,7 +518,7 @@ BEER <- function(DATA, BATCH,  GNUM=30, PCNUM=50, GN=2000, CPU=4, COMBAT=TRUE, p
         orig.data=GetAssayData(pbmc, assay='RNA', layer='counts')
         used.gene.index=which(rownames(orig.data) %in% VARG)
         #edata = as.matrix(orig.data)[used.gene.index,]
-        edata = as_matrix(orig.data)[used.gene.index,]
+        edata = as_matrix(orig.data[used.gene.index,])
         batch = pheno$batch
         modcombat = model.matrix(~1, data=pheno)
         combat_edata = ComBat(dat=edata, batch=batch, mod=modcombat, par.prior=TRUE, prior.plots=FALSE)
